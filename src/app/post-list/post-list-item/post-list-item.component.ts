@@ -17,12 +17,12 @@ export class PostListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  incrementLoveits() {
-  	this.postLoveTts++;
+  incrementLoveits(id: number) {
+  	this.postService.incrementPostLoveits(id);
   }
 
-  decrementLoveits() {
-  	this.postLoveTts--;
+  decrementLoveits(id: number) {
+  	this.postService.decrementPostLoveits(id);
   }
 
   deletPost(id: number) {
