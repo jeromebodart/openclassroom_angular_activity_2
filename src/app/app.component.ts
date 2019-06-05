@@ -19,8 +19,8 @@ export class AppComponent {
       }, 2000
     );
   });
- // constructor(private postsService: PostsService) {
-
+  constructor() {
+  }
 }
     //this.posts = this.postsService.postlists;
 

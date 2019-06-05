@@ -53,6 +53,16 @@ export class PostsService {
     this.emitPostSubject();
   }
 
+  incrementPostLoveits(id: number) {
+    this.getById(id.toString()).loveIts++;
+    this.emitPostSubject();
+  }
+
+  decrementPostLoveits(id: number) {
+    this.getById(id.toString()).loveIts--;
+    this.emitPostSubject();
+  }
+
   emitPostSubject(){
     this.postsSubject.next(this.postlists.slice());
   }
