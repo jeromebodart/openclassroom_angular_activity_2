@@ -1,7 +1,8 @@
 <h2 style="margin: 10px;">Posts</h2>
 <app-post-list-item  class="media-list" *ngFor="let postlist of postlists"
+                        [id]="postlist.id"
                         [postName]="postlist.title"
                         [postStatus]="postlist.content"
                         [postLoveTts]="postlist.loveIts"
                         [postDate]="postlist.created_at">
-                        </app-post-list-item>
+</app-post-list-item>

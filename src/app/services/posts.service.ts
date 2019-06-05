@@ -48,8 +48,8 @@ export class PostsService {
     this.emitPostSubject();
   }
 
-  removePost(post: Post){
-    this.postlists.splice(this.postlists.indexOf(post), 1);
+  removePost(id: number){
+    this.postlists.splice(this.postlists.indexOf(this.getById(id.toString())), 1);
     this.emitPostSubject();
   }
 
