@@ -6,9 +6,12 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostListItemComponent } from './post-list/post-list-item/post-list-item.component';
 import { PostsService } from './services/posts.service';
 import { Routes, RouterModule } from '@angular/router';
+import { NewPostComponent } from './post-list/new-post/new-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'posts', component: PostListComponent },
+  { path: 'new', component: NewPostComponent },
   { path: '', redirectTo: 'posts', pathMatch: 'full' },
   { path: '**', redirectTo: 'posts' }
 ];
@@ -18,9 +21,11 @@ const appRoutes: Routes = [
     AppComponent,
     PostListComponent,
     PostListItemComponent,
+    NewPostComponent,
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

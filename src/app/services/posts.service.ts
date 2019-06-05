@@ -41,7 +41,7 @@ export class PostsService {
     return this.postlists.find((p: Post) => p.id === parseInt(id, 10));
   }
 
-  createNewPost(newPost: Post) {
+  addNewPost(newPost: Post) {
     newPost.id = this.Counter;
     this.postlists.push(newPost);
     this.Counter++;
