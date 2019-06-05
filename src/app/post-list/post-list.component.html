@@ -1,0 +1,6 @@
+<app-post-list-item  class="media-list" *ngFor="let postlist of postlists"
+                        [postName]="postlist.title"
+                        [postStatus]="postlist.content"
+                        [postLoveTts]="postlist.loveIts"
+                        [postDate]="postlist.created_at">
+                        </app-post-list-item>
